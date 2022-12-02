@@ -8,7 +8,7 @@ export const SignUpContainer = styled.div`
     
 `
 
-export const SignUpWithSocNetworkContainer = styled.div`
+export const HalfSignUpContainer = styled.div`
     h2 {
     
     }
@@ -18,6 +18,18 @@ export const SignUpWithSocNetworkContainer = styled.div`
     }
 `
 
-export const FacebookSignUpButton = styled.div`
+interface SignUpButtonProps {
+    source: string
+}
 
+export const SignUpButton = styled.div<SignUpButtonProps>`
+    color: ${p => p.source === "facebook" ? "red" : "green"}
+`
+
+export const Caption = styled.p`
+    
+`
+
+export const OrContainer = styled.div`
+    
 `
