@@ -1,4 +1,5 @@
 import React from 'react';
+import facebookIcon from "../../assets/facebook-icon.svg"
 import {
     SignUpPageContainer,
     SignUpContainer,
@@ -16,11 +17,11 @@ const Registration = () => {
         <SignUpPageContainer>
             {/*<img src={} alt="Matcha logo"/>*/}
             <SignUpContainer>
-                <HalfSignUpContainer>
+                <HalfSignUpContainer source="facebook">
                     <h2>Find someone new!</h2>
                     <h3>Meet and chat to people near you</h3>
                     <SignUpButton source="facebook">
-                        {/*<img src={} alt="Facebook logo"/>*/}
+                        <img src={facebookIcon} alt="Facebook logo"/>
                         <p>Sign in via Facebook</p>
                     </SignUpButton>
                     <Caption>We never post on your behalf.</Caption>
@@ -28,7 +29,7 @@ const Registration = () => {
                         <p>OR</p>
                     </OrContainer>
                 </HalfSignUpContainer>
-                <HalfSignUpContainer>
+                <HalfSignUpContainer source="email">
                     <h2>Sign up with email</h2>
                     <input placeholder="Email"/>
                     <input placeholder="Create your password"/>
