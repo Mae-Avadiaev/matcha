@@ -3,41 +3,43 @@ import facebookIcon from "../../assets/facebook-icon.svg"
 import {
     SignUpPageContainer,
     SignUpContainer,
-    HalfSignUpContainer,
-    SignUpButton,
+    FacebookSignUpContainer,
+    EmailSignUpContainer,
     Caption,
-    OrContainer,
-} from "./Registration.styles";
+    CaptionWrapper,
+    OrContainer
+} from "./registration.styles";
+import Button from "../button/button.component";
+import Navbar from "../navbar/navbar.component";
 
 type RegistrationProps = {
 }
 
-const Registration = () => {
+function Registration() {
     return (
         <SignUpPageContainer>
             {/*<img src={} alt="Matcha logo"/>*/}
+            <Navbar/>
             <SignUpContainer>
-                <HalfSignUpContainer source="facebook">
+                <FacebookSignUpContainer>
                     <h2>Find someone new!</h2>
                     <h3>Meet and chat to people near you</h3>
-                    <SignUpButton source="facebook">
-                        <img src={facebookIcon} alt="Facebook logo"/>
-                        <p>Sign in via Facebook</p>
-                    </SignUpButton>
+                    <Button caption="Sign in via Facebook" icon={facebookIcon}/>
                     <Caption>We never post on your behalf.</Caption>
                     <OrContainer>
                         <p>OR</p>
                     </OrContainer>
-                </HalfSignUpContainer>
-                <HalfSignUpContainer source="email">
+                </FacebookSignUpContainer>
+                <EmailSignUpContainer>
                     <h2>Sign up with email</h2>
                     <input placeholder="Email"/>
+                    <br/>
                     <input placeholder="Create your password"/>
-                    <Caption>Password must be at least 8 characters</Caption>
-                    <SignUpButton source="email">
-                        <p>Create account</p>
-                    </SignUpButton>
-                </HalfSignUpContainer>
+                    <CaptionWrapper>
+                        <Caption>Password must be at least 8 characters</Caption>
+                    </CaptionWrapper>
+                    <Button caption="Create account"/>
+                </EmailSignUpContainer>
             </SignUpContainer>
         </SignUpPageContainer>
     );
