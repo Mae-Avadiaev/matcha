@@ -7,24 +7,21 @@ import {
     EmailSignUpContainer,
     Caption,
     CaptionWrapper,
-    OrContainer
-} from "./registration.styles";
+    OrContainer,
+    Decoration
+} from "./welcome.styles";
+import {Input} from "../input/input.styles";
 import Button from "../button/button.component";
-import Navbar from "../navbar/navbar.component";
+import decoration from "../../assets/decoration.png"
 
-type RegistrationProps = {
-}
-
-function Registration() {
+function Welcome() {
     return (
         <SignUpPageContainer>
-            {/*<img src={} alt="Matcha logo"/>*/}
-            <Navbar/>
             <SignUpContainer>
                 <FacebookSignUpContainer>
                     <h2>Find someone new!</h2>
                     <h3>Meet and chat to people near you</h3>
-                    <Button caption="Sign in via Facebook" icon={facebookIcon}/>
+                    <Button caption="Sign in via Facebook" icon={facebookIcon} onClick={() => {}}/>
                     <Caption>We never post on your behalf.</Caption>
                     <OrContainer>
                         <p>OR</p>
@@ -32,17 +29,18 @@ function Registration() {
                 </FacebookSignUpContainer>
                 <EmailSignUpContainer>
                     <h2>Sign up with email</h2>
-                    <input placeholder="Email"/>
+                    <Input placeholder="Email" width="55%"/>
                     <br/>
-                    <input placeholder="Create your password"/>
+                    <Input placeholder="Create your password" width="55%"/>
                     <CaptionWrapper>
                         <Caption>Password must be at least 8 characters</Caption>
                     </CaptionWrapper>
-                    <Button caption="Create account"/>
+                    <Button caption="Create account" onClick={() => {}}/>
                 </EmailSignUpContainer>
             </SignUpContainer>
+            <Decoration src={decoration} alt='Decoration image'/>
         </SignUpPageContainer>
     );
 };
 
-export default Registration;
+export default Welcome;

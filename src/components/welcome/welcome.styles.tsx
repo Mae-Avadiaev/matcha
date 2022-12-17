@@ -15,6 +15,8 @@ export const SignUpContainer = styled.main`
   display: flex;
   height: 70%;
   width: 65%;
+  z-index: 5;
+  margin-top: -9vh;
 `
 
 const HalfSignUpContainer = styled.div`
@@ -39,26 +41,6 @@ const HalfSignUpContainer = styled.div`
     line-height: 1.5rem;
     color: #2d2d2d;
     margin: 0 0 35px 0;
-  }
-  
-  input {
-    box-sizing: border-box;
-    width: 55%;
-    height: 40px;
-    padding: 0 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #2d2d2d;
-    font-size: 0.875rem;
-    transition: border-color .2s;
-    
-    &:hover, &:focus {
-      border: solid 1px #6740F5;
-      outline: none;
-    }
-    
-    
   }
 `
 
@@ -113,7 +95,6 @@ export const EmailSignUpContainer = styled(HalfSignUpContainer)`
   ${ButtonBackground} {
     background-color: #5D3ADD;
   }
-  
 `
 
 export const OrContainer = styled.div`
@@ -127,4 +108,12 @@ export const OrContainer = styled.div`
   right: -23px;
   background: #ECE9F7;
   z-index: 1;
+`
+
+export const Decoration = styled.img`
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  height: 360px;
 `
